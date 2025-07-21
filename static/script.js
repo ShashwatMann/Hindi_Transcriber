@@ -111,14 +111,14 @@ async function toggleRecording() {
 
     mediaRecorder.start();
     isRecording = true;
-    recordButton.innerText = '⏹️ Stop Recording';
+    recordButton.innerText = 'Stop Recording';
     appendMessage('🎤 Listening...', 'user');
 
     if (micPrompt) micPrompt.style.display = 'none';  // Hide while listening
   } else {
     mediaRecorder.stop();
     isRecording = false;
-    recordButton.innerText = '🎙️ Start Listening';
+    recordButton.innerText = 'Start Listening';
     if (micPrompt) micPrompt.style.display = 'block';  // Show again when stopped
   }
 }
