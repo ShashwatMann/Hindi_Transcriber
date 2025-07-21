@@ -3,12 +3,17 @@
 This is a real-time Hindi voice transcription web application built with Flask and the faster-whisper model. It allows users to record audio in Hindi from their browser and transcribe it into text using a lightweight and efficient Whisper implementation.
 
 ### 🚀 Features
-- 🎤 Real-time voice recording from browser
-- 📜 Hindi language transcription using faster-whisper
-- 💻 Interactive and responsive frontend (HTML/CSS/JS with TailwindCSS)
-- ⚙️ GPU acceleration (if available)
-- 🌗 Dark mode support
+- Real-time voice recording from browser
+- Hindi language transcription using faster-whisper
+- Interactive and responsive frontend (HTML/CSS/JS with TailwindCSS)
+- GPU acceleration (if available)
+- Dark mode support
 
+### 🚀 Ideas for Future Features
+- Add other languages as well
+- Translate it into another language
+- Provide summary of the transcription
+- Add text chat features as well.
 
 ### 📁 Project Structure
 ```
