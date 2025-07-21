@@ -11,7 +11,7 @@ This is a real-time Hindi voice transcription web application built with Flask a
 
 
 ### 📁 Project Structure
-
+`
 .
 ├── app.py              # Flask backend to handle transcription
 ├── requirements.txt    # Python dependencies
@@ -20,6 +20,7 @@ This is a real-time Hindi voice transcription web application built with Flask a
 ├── static/
 │   ├── styles.css      # Custom styles
 │   └── script.js       # Frontend JS logic for recording & UI
+`
 
 
 ### 🧠 Model
@@ -28,12 +29,12 @@ Uses faster-whisper for efficient and fast speech-to-text transcription in Hindi
 
 ⚙️ Setup Instructions
 1. Clone the Repository
-`git clone [<your-repo-url>](https://github.com/ShashwatMann/Hindi_Transcriber)
-cd Hindi_Transcriber`
+`git clone [<your-repo-url>](https://github.com/ShashwatMann/Hindi_Transcriber)`
+`cd Hindi_Transcriber`
 
 2. Create a Virtual Environment
-`python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate`
+`python -m venv venv`
+`source venv/bin/activate  # On Windows: venv\Scripts\activate`
 
 3. Install Dependencies
 `pip install -r requirements.txt`
