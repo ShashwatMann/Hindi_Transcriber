@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hindi Voice Transcription</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-800 p-4 space-y-4 overflow-y-auto">
+    <div class="mb-6">
+      <h1 class="text-purple-400 text-3xl font-bold">Hindi Transcriber</h1>
+    </div>
+    <div class="space-y-2">
+      <h2 class="text-purple-400 text-lg font-semibold">Chats</h2>
+      <button onclick="newChat()" class="w-full text-left bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 font-medium px-4 py-2 rounded transition-colors duration-300">+ New</button>
+    </div>
+    <ul id="historyList" class="space-y-2 text-sm mt-4"></ul>
+  </aside>
+
+  <!-- Main content -->
+  <div class="flex-1 flex flex-col">
+    <header class="w-full bg-gray-800 p-4 flex justify-end items-center shadow">
+      <div class="flex items-center gap-2">
+        <span class="text-sm">🌙</span>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="themeToggle" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-gray-600 peer-focus:ring-4 peer-focus:ring-blue-300 transition-colors duration-300"></div>
+          <span class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full transition-transform duration-300 transform peer-checked:translate-x-full"></span>
+        </label>
+        <span class="text-sm">☀️</span>
+      </div>
+    </header>
+
+    <main class="flex-1 flex flex-col p-4 overflow-hidden max-w-4xl w-full mx-auto">
+      <div id="chat-box" class="flex-1 bg-gray-800 p-4 rounded overflow-y-auto space-y-4">
+        <div id="micPrompt" class="text-center text-gray-500">🎙️ Click the mic to start speaking in Hindi</div>
+      </div>
+      <canvas id="waveform" class="mt-4 hidden"></canvas>
+      <div class="mt-4 flex gap-2 justify-center">
+        <button onclick="toggleRecording()" id="recordButton" class="w-fit px-6 py-2 rounded transition-colors duration-300
+          dark:bg-blue-500/60 dark:hover:bg-blue-500/30 dark:text-white-300
+          bg-black text-white hover:bg-gray-900">
+          Start Listening
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
